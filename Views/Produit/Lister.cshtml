@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div>
+    <h1>Lister Page</h1>
+</div>
+
+
+<ul>
+    @foreach (var item in ViewBag.ProduitsList)
+    {
+        <li>@item.Id - @item.Description</li>
+    }
+</ul>
+
+<a asp-controller="Produit" asp-action="Accueil">Back to accueil</a>

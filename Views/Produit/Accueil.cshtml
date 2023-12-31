@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "Accueil Page";
+}
+<div>
+    <h1>Accueil Page</h1>
+</div>
+
+<a asp-controller="Produit" asp-action="Lister">Lien ICI</a>
+<br />
+
+<h5>list des IDs</h5>
+<ul>
+    @foreach(var item in ViewBag.ProduitsList)
+    {
+        <li><a asp-route-Id=@item.Id asp-action="Edit">ID</a></li>
+    }
+</ul>

@@ -1,0 +1,26 @@
+﻿
+@model tp4Routing.Models.Produit
+
+@{
+    ViewData["Title"] = "Edit Product";
+}
+
+<h1>Edit Product</h1>
+
+<form asp-controller="Produit" asp-action="Update" method="post">
+    <input type="Text" asp-for="Id" readonly />
+
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PrixUnitaire"></label>
+        <input asp-for="PrixUnitaire" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update Product</button>
+</form>
+
+<a asp-controller="Produit" asp-action="Lister">Back to List</a>
